@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая неделя. Список трат.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="column left_column">
+            <form id="form_section">
+                 <h2>Добавить трату</h2>
+                <label for="name">Название:</label>
+                <input type="text"  id="name">
+                <label for="amount">Сумма:</label>
+                <input type="number" min="0" step="0.01"  id="amount">
+                <label for="category">Категория:</label>
+                <select name="category" id="category">
+                    <option value="Еда">Еда</option>
+                    <option value="Питье">Питье</option>
+                    <option value="Расходы на передвижение">Расходы на передвижение</option>
+                </select>
+                <button type="button" id="form_section-button">Сохранить</button>
+
+            </form>
+
+
+        </div>
+        <div class="column right_column">
+            <h1>Фильтр:</h1>
+            <div class="filter">
+                    <button class="active"  data-type="Все">Все</button>
+                    <button data-type="Еда">Еда</button>
+                   <button data-type="Питье">Питье</button>
+                    <button data-type="Расходы на передвижение">Расходы на передвижение</button>
+            </div>
+            <h1 class="list_title">Список трат:</h1>
+            <div class="list_item_title">
+                <h3>#</h3>
+                <h3>Название:</h3>
+                <h3>Сумма:</h3>
+                <h3>Категория:</h3>
+            </div>
+
+            <ul class="list_items">
+               
+            </ul>
+            
+           <div class="score"><h3>Общая сумма расходов:</h3><div class="score_total"></div></div> 
+           <button id="remove_all">Очистить все</button>
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
